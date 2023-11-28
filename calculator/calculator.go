@@ -38,7 +38,7 @@ func (c *Calculator) ParseInput() {
 			fmt.Println("Ошибка при преобразовании первого значения", err)
 			return
 		}
-		firstValue = int(floatValue)
+		firstValue = uint8(floatValue)
 	}
 
 	secondValue, err := roman.RomanToArabic(secondValueStr)
@@ -48,7 +48,7 @@ func (c *Calculator) ParseInput() {
 			fmt.Println("Ошибка при преобразовании второго значения", err)
 			return
 		}
-		secondValue = int(floatValue)
+		secondValue = uint8(floatValue)
 	}
 
 	c.MathOperation = parts[1]
